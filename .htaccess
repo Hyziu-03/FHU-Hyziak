@@ -1,0 +1,15 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+RewriteEngine on
+RewriteRule strona-glowna index.html
+RewriteRule o-nas o-naszej-firmie.html
+RewriteRule co-nowego aktualnosci.html
+RewriteRule kontakt-z-nami kontakt.html
+RewriteRule obostrzenia-koronawirus koronawirus.html
+
+RewriteCond %{HTTPS} !=on 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
