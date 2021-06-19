@@ -5,21 +5,21 @@ var coronavirus = document.getElementById('coronavirus');
 var home = document.querySelector('.header-icon');
 
 aboutUs.addEventListener('click', function() {
-    window.location.href = 'o-naszej-firmie.html';
+    window.location.href = 'o-naszej-firmie';
 }); 
 
 whatsNew.addEventListener('click', function() {
-    window.location.href = 'co-nowego.html';
+    window.location.href = 'co-nowego';
 });
 
 contact.addEventListener('click', function() {
-    window.location.href = 'kontakt-z-nami.html';
+    window.location.href = 'kontakt-z-nami';
 });
 
 coronavirus.addEventListener('click', function() {
-    window.location.href = 'obostrzenia-koronawirus.html';
+    window.location.href = 'obostrzenia-koronawirus';
 });
 
 home.addEventListener('click', function() {
-    window.location.href = 'index.html';
+    window.location.href = 'strona-glowna';
 });
