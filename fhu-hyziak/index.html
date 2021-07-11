@@ -28,48 +28,76 @@
 <body>
     <div class="container">
         <header class="datetime-header"">
-            <i class="fas fa-home" tabindex="0"></i>
+            <a href="index.html" class="return-home"><i class="fas fa-home" tabindex="0"></i></a>
             <div class="datetime">
-                <span id="weekday" tabindex="0"></span>
-                &emsp; | &emsp;
-                <span id="time" tabindex="0"></span>
-                &emsp; | &emsp;
+                <span id="weekday" tabindex="0"></span> |
+                <span id="time" tabindex="0"></span> |
                 <span id="date" tabindex="0"></span>
             </div>
+            <i class="fas fa-virus" tabindex="0"></i>
         </header>
         <nav class="navigation">
-            <img src="images/logo.png" alt="Logo FHU Hyziak" class="logo" title="Logo FHU Hyziak">
+            <a href="index.html"><img src="images/logo.png" alt="Logo FHU Hyziak" class="logo" title="Logo FHU Hyziak"></a>
             <ol class="items-list">
-                <li class="item">
-                    <img src="images/agreement.png" alt="" class="items-image">
-                    <span class="items-text">Kim jesteśmy?</span>
+                <li>
+                    <a href="o-nas.html" class="about-us item">
+                        <img src="images/agreement.png" alt="" class="items-image">
+                        <span class="items-text">Kim jesteśmy?</span>
+                    </a>
                 </li>
-                &emsp;&emsp;
-                <li class="item">
-                    <img src="images/paper.png" alt="" class="items-image">
-                    <span class="items-text">Aktualności</span>
+                <li>
+                    <a href="co-nowego.html" class="news item">
+                        <img src="images/paper.png" alt="" class="items-image">
+                        <span class="items-text">Aktualności</span>
+                    </a>
                 </li>
-                &emsp;&emsp;
-                <span class="lol"></span>
-                <li class="item">
-                    <img src="images/email.png" alt="" class="items-image">
-                    <span class="items-text">Kontakt</span>
+                <li>
+                    <a href="kontakt.html" class="contact item">
+                        <img src="images/email.png" alt="" class="items-image">
+                        <span class="items-text">Kontakt</span>
+                    </a>
                 </li>
-                &emsp;&emsp;
-                <li class="item">
-                    <img src="images/virus.png" alt="" class="items-image">
-                    <span class="items-text">Obostrzenia</span>
+                <li>
+                    <a href="koronawirus.html" class="coronavirus item">
+                        <img src="images/virus.png" alt="" class="items-image">
+                        <span class="items-text">Obostrzenia</span>
+                    </a>
+                </li>
+                <li class="show-more item">
+                    <img src="images/add.png" alt="" class="items-image">
+                    <span class="items-text">Zobacz więcej opcji!</span>
                 </li>
             </ol>
         </nav>
         <main>
-
+            <header class="page-header" tabindex="0">
+                <h1>Witamy na stronie internetowej FHU Hyziak!</h1>
+            </header>
+            <article class="layout-fixer">
+                <section class="page" tabindex="0">
+                    <p class="page-description">
+                        Prowadzimy <strong>skup grzybów i jabłek</strong>.
+                        Dysponujemy też <strong>magazynami pod wynajem</strong>.
+                    </p>
+                    <p class="page-description">
+                        Zapraszamy do zapoznania się z naszą ofertą.
+                        Zachęcamy do skorzystania <u class="menu-toggler">z menu powyżej</u>.
+                    </p>
+                </section>
+                <img src="images/mushroom.png" alt="" class="page-image">
+            </article>
+            <footer class="page-footer">
+                <a href="kontakt.html" class="link">Zobacz nasze dane kontaktowe!</a>
+            </footer>
         </main>
         <footer class="footer">
-
+            <strong>FHU Hyziak</strong> - <strong>skup grzybów</strong>, <strong>jabłek</strong> i <strong>wynajem magazynów 
+            w Ropicy Polskiej</strong> © Wszelkie prawa zastrzeżone. | Autorem strony internetowej jest 
+            <strong>Szymon Hyziak</strong>.
         </footer>
     </div>
     <script src="https://kit.fontawesome.com/d1ae74e7ee.js" crossorigin="anonymous"></script>
     <script src="scripts/datetime-setter.js"></script>
+    <script src="scripts/shadow-setter.js"></script>
 </body>
 </html>
