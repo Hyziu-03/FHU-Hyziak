@@ -8,7 +8,6 @@ html {
     font-size: 18px;
     font-family: 'Comfortaa', sans-serif;
     color: rgba(0, 0, 0, 0.8);
-    background-image: linear-gradient(315deg, #FFFFFF 0%, #D7E1EC 74%);
 }
 
 .container {
@@ -32,6 +31,7 @@ html {
     line-height: 150%;
     position: fixed;
     width: 95%;
+    z-index: 100;
 }
 
 #weekday,
@@ -49,13 +49,14 @@ html {
     color: inherit;
 }
 
-.fa-virus {
+.goto-coronavirus {
     position: absolute;
     right: 10vw;
     visibility: hidden;
     padding: 8px;
     border-radius: 50%;
     transition: .25s all ease;
+    color: inherit;
 }
 
 .return-home:hover,
@@ -158,12 +159,70 @@ main {
     line-height: 200%;
 }
 
+.shortened {
+    max-width: 85%;
+}
+
 .page-image {
-    width: 100px;
+    width: 150px;
     height: auto;
     margin: 32px 0;
     position: relative;
-    left: 160px;
+    left: 60px;
+}
+
+.apple-image {
+    width: 150px;
+    height: auto;
+    margin: 32px 0;
+    position: relative;
+    right: 90px;
+}
+
+.waving-hand {
+    width: 150px;
+    height: auto;
+    margin: 32px 0;
+    position: relative;
+    right: 160px;
+    animation-name: wave;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    100% {
+        transform: rotate(0.0deg)
+    }
 }
 
 .page-footer {
@@ -256,5 +315,11 @@ main {
     }
     .contact {
         display: none;
+    }
+}
+
+@media(max-width: 375px) {
+    .datetime-header {
+        font-size: 1rem;
     }
 }
