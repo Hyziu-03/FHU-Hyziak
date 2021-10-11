@@ -259,7 +259,6 @@ body {
 #site-content-description-paragraph {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 
     margin: 50px;
