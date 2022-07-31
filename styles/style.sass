@@ -152,7 +152,6 @@ html
 
 .intro, .hero, .contact-info
     width: 50%
-    height: 100%
 
 .intro
     padding-bottom: $unit * 2
@@ -164,6 +163,27 @@ html
 .text
     padding: $unit $unit * 2
     line-height: 200%
+
+.index-intro
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-bottom: $unit * 2
+
+.contact-button
+    transition: .25s all ease 
+    padding: $unit * 3/2
+    border: 2px solid $black 
+    border-radius: $unit * 2
+    background-color: inherit 
+    align-self: center
+    margin-top: $unit * 2
+    font-family: 'Poppins', sans-serif
+    font-size: $unit 
+
+    &:hover
+        cursor: pointer
+        box-shadow: 0 2.1px 5.3px rgba(42, 42, 42, .128), 0 7.1px 17.9px rgba(42, 42, 42, .048), 0 32px 80px rgba(42, 42, 42, .24)
 
 .image
     margin: $unit * 2 
