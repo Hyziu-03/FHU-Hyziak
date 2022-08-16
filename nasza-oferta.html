@@ -75,11 +75,11 @@
         <main class="content news">
             <section class="intro">
                 <h1 class="heading">Sprawdź ofertę skupu grzybów i jabłek!</h1>
-                <p class="text">Aktualnie skupujemy tylko suszonego borowika pozaklasowego.</p>
-                <p class="text">W celu uzyskania informacji o cenie oraz wymaganiach dotyczących jakości towaru zapraszamy do kontaktu telefonicznego.</p>
-                <p class="text">Obecnie nie posiadamy magazynów do wynajęcia.</p>
-                <p class="text">Jesteśmy do Państwa dyspozycji w dni powszednie od 10:00 do 17:00.</p>
-                <p class="text">Zapraszamy do współpracy!</p>
+                <p class="text" tabindex="0">Aktualnie skupujemy tylko suszonego borowika pozaklasowego.</p>
+                <p class="text" tabindex="0">W celu uzyskania informacji o cenie oraz wymaganiach dotyczących jakości towaru zapraszamy do kontaktu telefonicznego.</p>
+                <p class="text" tabindex="0">Obecnie nie posiadamy magazynów do wynajęcia.</p>
+                <p class="text" tabindex="0">Jesteśmy do Państwa dyspozycji w dni powszednie od 10:00 do 17:00.</p>
+                <p class="text" tabindex="0">Zapraszamy do współpracy!</p>
             </section>
             <img src="images/thanh-soledas.webp" alt="Świeżo zebrane grzyby leżące na stole" class="hero">
         </main>
@@ -89,23 +89,7 @@
 
     <script src="index.js" async></script>
     <script>
-        const registerServiceWorker = async () => {
-            if ('serviceWorker' in navigator) {
-                try {
-                    const registration = await navigator.serviceWorker.register('service-worker.js', {
-                        scope: '.'
-                    });
-
-                    if (registration.installing) console.log('Service worker is being installed');
-                    else if (registration.waiting) console.log('Service worker has been installed');
-                    else if (registration.active) console.log('Service worker is active');
-                } catch (error) {
-                    console.error(error);
-                }
-            }
-        };
-
-        registerServiceWorker();
+        const registerServiceWorker=async()=>{if("serviceWorker"in navigator)try{const e=await navigator.serviceWorker.register("service-worker.js",{scope:"."});e.installing?console.log("Service worker is being installed"):e.waiting?console.log("Service worker has been installed"):e.active&&console.log("Service worker is active")}catch(e){console.error(e)}};registerServiceWorker();
     </script>
 </body>
 
