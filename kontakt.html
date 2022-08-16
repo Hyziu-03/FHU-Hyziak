@@ -86,8 +86,11 @@
 
         <main class="content contact">
             <ol class="contact-info" id="contact-info">
-                <span class="captcha-message">Rozwiąż zabezpieczenie, aby uzyskać dostęp do danych kontaktowych.</span>
-                <div class="captcha" id="captcha" data-size=""></div>
+                <li class="contact-data"> <span class="material-symbols-rounded">smartphone</span> <a href="tel:+48602389971" class="link">+48 602 389 971</a> </li>
+                <li class="contact-data"> <span class="material-symbols-rounded">smartphone</span> <a href="tel:+48692019518" class="link">+48 692 019 518</a> </li>
+                <li class="contact-data"> <span class="material-symbols-rounded">phone</span> <a href="tel:+48183526729" class="link">+48 18 352 67 29</a> </li>
+                <li class="contact-data"> <span class="material-symbols-rounded">email</span> <a href="mailto:jj.hyziak@xl.wp.pl" class="link">jj.hyziak@xl.wp.pl</a> </li>
+                <li class="contact-data"> <span class="material-symbols-rounded">home</span> <span tabindex="0">Ropica Polska 20, 38-300 Gorlice</span> </li>
             </ol>
             <section class="google-maps">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2583.6717480430893!2d21.14175621559563!3d49.64164097937198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473dc682ac8aa5ef%3A0x6a7e39ff8afee857!2sFHU%20Hyziak!5e0!3m2!1spl!2spl!4v1653050077842!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map" title="Lokalizacja FHU Hyziak na mapie"></iframe>
@@ -98,40 +101,8 @@
     </div>
     
     <script src="index.js" async></script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script>
-        var onloadCallback = function () {
-            grecaptcha.render('captcha', {
-                'sitekey': '6Lc8KR4gAAAAAKE__cMGTBgdjZaYGYnkZ7WxYUIr',
-                    'callback': correctCaptcha
-            });
-        };
-        const contactInformation = '<li class="contact-data"> <span class="material-symbols-rounded">smartphone</span> <a href="tel:+48602389971" class="link">+48 602 389 971</a> </li> <li class="contact-data"> <span class="material-symbols-rounded">smartphone</span> <a href="tel:+48692019518" class="link">+48 692 019 518</a> </li> <li class="contact-data"> <span class="material-symbols-rounded">phone</span> <a href="tel:+48183526729" class="link">+48 18 352 67 29</a> </li> <li class="contact-data"> <span class="material-symbols-rounded">email</span> <a href="mailto:jj.hyziak@xl.wp.pl" class="link">jj.hyziak@xl.wp.pl</a> </li> <li class="contact-data"> <span class="material-symbols-rounded">home</span> Ropica Polska 20, 38-300 Gorlice </li>';
-        var correctCaptcha = function (response) {
-            if (response.length !== 0) {
-                const captcha = document.getElementById('captcha');
-                const protectedField = document.getElementById('contact-info');
-                protectedField.innerHTML = contactInformation;
-                captcha.style.display = 'none';
-            }
-        };
-    </script>
-    <script>
-        const registerServiceWorker = async () => {
-            if ('serviceWorker' in navigator) {
-                try {
-                    const registration = await navigator.serviceWorker.register('service-worker.js', {
-                        scope: '.'
-                    });
-                    if (registration.installing) console.log('Service worker is being installed');
-                    else if (registration.waiting) console.log('Service worker has been installed');
-                    else if (registration.active) console.log('Service worker is active');
-                } catch (error) {
-                    console.error(error);
-                }
-            }
-        };
-        registerServiceWorker();
+        const registerServiceWorker=async()=>{if("serviceWorker"in navigator)try{const e=await navigator.serviceWorker.register("service-worker.js",{scope:"."});e.installing?console.log("Service worker is being installed"):e.waiting?console.log("Service worker has been installed"):e.active&&console.log("Service worker is active")}catch(e){console.error(e)}};registerServiceWorker();
     </script>
 </body>
 
