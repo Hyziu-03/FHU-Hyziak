@@ -69,9 +69,9 @@
             <section class="intro index-intro">
                 <h1 class="heading">Witamy na stronie internetowej FHU Hyziak!</h1>
                 <p class="text" tabindex="0">Prowadzimy skup grzybów i jabłek. Dysponujemy też magazynami pod wynajem. Zapraszamy do zapoznania się z naszą ofertą. Zachęcamy do skorzystania z menu powyżej.</p>
-                <button class="contact-button"><a href="kontakt.html" class="link">Skontaktuj się z nami!</a></button>
+                <button class="button" tabindex="-1"><a href="kontakt.html" class="link contact-button">Skontaktuj się z nami!</a></button>
             </section>
-            <img src="images/podworko-w-ropicy-polskiej.jpg" alt="Siedziba firmy w Ropicy Polskiej" class="hero">
+            <img src="images/podworko-w-ropicy-polskiej.webp" alt="Siedziba firmy w Ropicy Polskiej" class="hero">
         </main>
 
         <footer class="footer">FHU Hyziak - skup grzybów, jabłek i wynajem magazynów w Ropicy Polskiej k. Gorlic &copy; Wszelkie prawa zastrzeżone. Autorem strony internetowej jest Szymon Hyziak.</footer>
@@ -79,21 +79,7 @@
 
     <script src="index.js" async></script>
     <script>
-        const registerServiceWorker = async () => {
-            if ('serviceWorker' in navigator) {
-                try {
-                    const registration = await navigator.serviceWorker.register('service-worker.js', {
-                        scope: '.'
-                    });
-                    if (registration.installing) console.log('Service worker is being installed');
-                    else if (registration.waiting) console.log('Service worker has been installed');
-                    else if (registration.active) console.log('Service worker is active');
-                } catch (error) {
-                    console.error(error);
-                }
-            }
-        };
-        registerServiceWorker();
+        const registerServiceWorker=async()=>{if("serviceWorker"in navigator)try{const e=await navigator.serviceWorker.register("service-worker.js",{scope:"."});e.installing?console.log("Service worker is being installed"):e.waiting?console.log("Service worker has been installed"):e.active&&console.log("Service worker is active")}catch(e){console.error(e)}};registerServiceWorker();
     </script>
 </body>
 
