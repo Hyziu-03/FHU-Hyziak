@@ -46,7 +46,8 @@
     <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"></noscript>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -76,7 +77,7 @@
 
         <nav class="navigation">
             <ol class="menu">
-                <li><a href="/" class="menu-item"><img src="icons/mushroom.png" class="logo" alt="FHU Hyziak"></a></li>
+                <li><a href="/" class="menu-item"><img src="icons/mushroom.png" width="64px" height="64px" alt="FHU Hyziak"></a></li>
                 <li><a href="kontakt.html" class="menu-item">Kontakt</a></li>
                 <li><a href="aktualnosci.html" class="menu-item">Aktualności</a></li>
                 <li><a href="opinie.html" class="menu-item">Opinie</a></li>
