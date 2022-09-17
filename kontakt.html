@@ -6,12 +6,12 @@
 <head>
     <!-- Google Tag Manager --> 
     <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NZ9LBPJ');
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-NZ9LBPJ');
     </script> 
     <!-- End Google Tag Manager -->
 
     <!-- Global site tag (gtag.js) - Google Ads: 10923619002 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10923619002"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=AW-10923619002"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -43,14 +43,6 @@
 
     <title>FHU Hyziak - Kontakt</title>
 
-    <link rel="manifest" href="manifest.json">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"></noscript>
-    <link rel="stylesheet" href="styles/style.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
     <!--[if lt IE 9]> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous"></script>
     <![endif]-->
@@ -76,9 +68,9 @@
         <header class="header">Jesteśmy otwarci od 10:00 do 17:00!</header>
 
         <nav class="navigation">
-            <span class="material-symbols-rounded" id="chevron">expand_more</span>
+            
             <ol class="menu">
-                <li><a href="/" class="menu-item"><img src="icons/mushroom.png" width="64px" height="64px" alt="FHU Hyziak"></a></li>
+                <li><a href="/" class="menu-item"><img loading="lazy" src="icons/mushroom.png" width="64px" height="64px" alt="FHU Hyziak"></a></li>
                 <li><a href="kontakt.html" class="menu-item">Kontakt</a></li>
                 <li><a href="aktualnosci.html" class="menu-item">Aktualności</a></li>
                 <li><a href="opinie.html" class="menu-item">Opinie</a></li>
@@ -102,7 +94,16 @@
         <footer class="footer">FHU Hyziak - skup grzybów, jabłek i wynajem magazynów w Ropicy Polskiej k. Gorlic &copy; Wszelkie prawa zastrzeżone. Autorem strony internetowej jest Szymon Hyziak.</footer>
     </div>
     
-    <script src="index.js" async></script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"></noscript>
+    <link rel="preload" href="styles/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <noscript><link rel="stylesheet" href="styles/style.min.css"></noscript>
+
+    <script src="index.js" defer></script>
     <script>
         const registerServiceWorker=async()=>{if("serviceWorker"in navigator)try{const e=await navigator.serviceWorker.register("service-worker.js",{scope:"."});e.installing?console.log("Service worker is being installed"):e.waiting?console.log("Service worker has been installed"):e.active&&console.log("Service worker is active")}catch(e){console.error(e)}};registerServiceWorker();
     </script>
