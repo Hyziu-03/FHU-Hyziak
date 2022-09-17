@@ -1,5 +1,1 @@
-try {
-    this.addEventListener('fetch', () => {});
-} catch (error) {
-    console.log(error);
-}
+try{this.addEventListener("fetch",()=>{})}catch(t){console.log(t)}
