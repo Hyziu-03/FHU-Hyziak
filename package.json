@@ -1,0 +1,15 @@
+{
+  "name": "fhu-hyziak",
+  "version": "1.0.0",
+  "description": "Oficjalna strona internetowa firmy FHU Hyziak.",
+  "main": "index.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Szymon Hyziak",
+  "license": "ISC",
+  "devDependencies": {
+    "compression-webpack-plugin": "^10.0.0"
+  }
+}
