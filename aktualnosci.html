@@ -77,21 +77,18 @@
         <main class="content news">
             <section class="intro">
                 <h1 class="heading">Poznaj ofertę skupu grzybów i jabłek!</h1>
-                <p class="text" tabindex="0">
+                <p class="text" tabindex="0"> <!-- CHANGE OF ELEMENT STRUCTURE -->
                     Rozpoczęliśmy już skup grzybów i jabłek w sezonie 2022.
                     Serdecznie zapraszamy!
-                </p>
-                <p class="text" tabindex="0">
+                    <br><br>
                     W celu uzyskania informacji o cenie oraz wymaganiach
                     dotyczących jakości towaru zapraszamy do kontaktu
                     telefonicznego.
-                </p>
-                <p class="text" tabindex="0">
+                    <br><br>
                     Obecnie posiadamy do wynajęcia poddasze użytkowe
                     o powierzchni 180 m<sup>2</sup>, odpowiednie na magzyn
                     rzeczy lekkich.
-                </p>
-                <p class="text" tabindex="0">
+                    <br><br>
                     Zainteresowanych zapraszamy do kontaktu.
                 </p>
             </section>
@@ -283,10 +280,13 @@
             margin-top: 48px
         }
 
-        .contact-info,
-        .hero,
-        .intro {
-            width: 50%
+        .hero { /* CHANGED STYLES */ 
+            aspect-ratio: 16/9 !important;
+            height: auto;
+            max-width: 50%;
+            object-fit: scale-down;
+            align-self: flex-start;
+            float: right;
         }
 
         .intro {
@@ -304,7 +304,7 @@
 
         .text {
             padding: 16px 32px;
-            line-height: 200%
+            line-height: 200%;
         }
 
         .index-intro {
@@ -415,8 +415,7 @@
             background-color: #e0ba81
         }
 
-        @media (max-width:1500px) {
-
+        @media (max-width:1000px) { /* CHANGED BREAKPOINT VALUE */
             .about-us,
             .index,
             .news {
@@ -429,13 +428,12 @@
                 align-items: center
             }
 
-            .hero,
-            .intro {
-                width: 100%
-            }
-
             .hero {
-                margin-top: 32px
+                margin-top: 32px;
+                aspect-ratio: 16/9 !important;
+                height: auto;
+                object-fit: scale-down;
+                min-width: 100vw;
             }
         }
 
@@ -502,10 +500,7 @@
                 height: 210px
             }
         }
-
-        img {
-            aspect-ratio: attr(width)/attr(height);
-        }
+        /* DELETED CODE */ 
     </style>
 
     <script src="index.min.js" type="module" defer></script>
