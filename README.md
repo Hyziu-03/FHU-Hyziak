@@ -1,3 +1,4 @@
-# FHU-Hyziak-Astro
+# FHU Hyziak 
 
-Oficjalna strona internetowa FHU Hyziak
+Repozytorium oficjalnej strony internetowej FHU Hyziak. 
+Zapraszamy na <https://fhu-hyziak.vercel.app/>!
