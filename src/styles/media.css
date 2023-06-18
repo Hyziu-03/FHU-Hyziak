@@ -1,0 +1,23 @@
+@media screen and (max-width: 1200px) {
+  .intro-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .meta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meta > *,
+  .column > * {
+    margin: 4px 0;
+  }
+
+  .rating,
+  .reviewer {
+    text-align: center;
+  }
+}
