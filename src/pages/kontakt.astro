@@ -5,8 +5,12 @@ import "../styles/contact.css";
 import ContactPiece from "../components/ContactPiece.astro";
 ---
 
-<Base>
-    <ol class="contact-info">
+<Base
+    title="Kontakt - FHU Hyziak - Skup grzybów i jabłek w Ropicy Polskiej"
+    path="kontakt"
+    description="Prowadzimy skup grzybów i jabłek w Ropicy Polskiej k. Gorlic. Skontaktuj się z nami i dowiedz się o dzisiejszych cenach!"
+>
+    <ol class="contact-info" id="contact-info">
         <ContactPiece
             symbol="call"
             link="+48 602 389 971"
@@ -33,6 +37,7 @@ import ContactPiece from "../components/ContactPiece.astro";
         allowfullscreen=""
         referrerpolicy="no-referrer-when-downgrade"
         class="map"
+        id="map"
         title="Lokalizacja FHU Hyziak na mapie">
     </iframe>
 </Base>
