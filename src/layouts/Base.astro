@@ -59,18 +59,25 @@ const { title, path, description } = Astro.props;
     </head>
     <body>
         <div>
-            <header class="header" id="header">
+            <header class="header" id="header" tabindex="0">
                 Zapraszamy w godzinach 10:00 - 17:00!
             </header>
             <nav>
                 <ol class="menu">
                     <li>
-                        <a href="/" class="link menu-item logo-container"><Logo />Strona główna</a>
+                        <a 
+                            href="/" 
+                            class="link menu-item logo-container"
+                            rel="noopener noreferrer"
+                        >
+                            <Logo />Strona główna
+                        </a>
                     </li>
                     <li>
                         <a
                             href="/kontakt"
                             class="link menu-item transform-underline"
+                            rel="noopener noreferrer"
                         >
                             Kontakt
                         </a>
@@ -79,6 +86,7 @@ const { title, path, description } = Astro.props;
                         <a
                             href="/aktualnosci"
                             class="link menu-item transform-underline"
+                            rel="noopener noreferrer"
                         >
                             Aktualności
                         </a>
@@ -87,6 +95,7 @@ const { title, path, description } = Astro.props;
                         <a
                             href="/opinie"
                             class="link menu-item transform-underline"
+                            rel="noopener noreferrer"
                         >
                             Opinie
                         </a>
@@ -95,6 +104,7 @@ const { title, path, description } = Astro.props;
                         <a
                             href="/o-nas"
                             class="link menu-item transform-underline"
+                            rel="noopener noreferrer"
                         >
                             O nas
                         </a>

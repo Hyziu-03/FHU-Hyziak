@@ -1,3 +1,5 @@
+"use script";
+
 const currHour = new Date().getHours();
 const inOpennHours = currHour > 9 && currHour < 18;
 
