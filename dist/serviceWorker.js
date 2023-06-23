@@ -1,0 +1,1 @@
+this.addEventListener("fetch",(function(){}),{passive:!0});
