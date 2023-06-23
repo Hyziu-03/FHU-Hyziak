@@ -2,10 +2,10 @@
 const { url, alt, name, contents } = Astro.props;
 ---
 
-<section class="review-container">
+<section class="review-container" tabindex="0">
     <section class="review">
         <section class="meta">
-            <img src={url} class="pic" alt={alt} />
+            <img src={url} class="pic" alt={alt} loading="lazy"/>
             <section class="column">
                 <span class="reviewer">{name}</span>
                 <section class="rating">
