@@ -93,9 +93,16 @@ ol {
   }
 }
 
+.logo-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo {
   aspect-ratio: 1/1;
   width: 64px;
+  margin-bottom: 8px;
 
   &:hover {
     transform: rotate(360deg);
