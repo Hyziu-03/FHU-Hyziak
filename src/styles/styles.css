@@ -83,7 +83,6 @@ button {
 .column {
   display: flex;
   flex-direction: column;
-  margin-left: 24px;
 }
 
 .contents:not(:empty) {

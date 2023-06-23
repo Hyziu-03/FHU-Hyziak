@@ -21,3 +21,9 @@
     text-align: center;
   }
 }
+
+@media screen and (min-width: 550px) {
+  .column {
+    margin-left: 24px;
+  }
+}
