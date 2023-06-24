@@ -73,8 +73,9 @@ ol {
   display: inline-block;
   position: relative;
   color: var(--black, black);
+}
 
-  &::after {
+.transform-underline::after {
     content: "";
     position: absolute;
     width: 160%;
@@ -85,13 +86,12 @@ ol {
     background-color: var(--black, black);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
-  }
+}
 
-  &:hover::after {
+.transform-underline:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-}
 
 .logo-container {
   display: inline-flex;
