@@ -47,6 +47,7 @@ ol {
 .header {
   background-color: var(--primary, tan);
   border-bottom: 1px solid var(--black, black);
+  width: 100vw;
   text-align: center;
   padding: 32px;
   position: sticky;
