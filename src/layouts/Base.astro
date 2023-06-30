@@ -11,7 +11,7 @@ const { title, path, description } = Astro.props;
 <!DOCTYPE html>
 <html lang="pl-PL">
     <head>
-        <script src="../components/GoogleTag.js"></script>
+        <script async src="../components/GoogleTag.js"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
@@ -20,6 +20,7 @@ const { title, path, description } = Astro.props;
             gtag("js", new Date());
             gtag("config", "G-JQDZ6GHD7E");
         </script>
+        <script async src="../components/AdSense.js"></script>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={description} />
