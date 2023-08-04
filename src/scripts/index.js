@@ -3,8 +3,8 @@ const inOpennHours = currHour > 9 && currHour < 18;
 
 const header = document.querySelector("#header");
 header.innerHTML = inOpennHours
-  ? "Jesteśmy otwarci do 17:00. Zapraszamy!"
-  : "Zapraszamy w godzinach 10:00 - 17:00";
+  ? "Jesteśmy otwarci do 16:00. Zapraszamy!"
+  : "Zapraszamy w godzinach 10:00 - 16:00";
 
 const contactInfo = document.querySelector("#contact-info");
 const map = document.querySelector("#map");
