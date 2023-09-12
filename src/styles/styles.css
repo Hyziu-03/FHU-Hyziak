@@ -36,6 +36,13 @@ button {
   max-width: 66ch;
 }
 
+.newline {
+  padding: 0 32px;
+  line-height: 200%;
+  text-align: center;
+  max-width: 66ch;
+}
+
 .btn {
   background-color: transparent;
   border-radius: 32px;
