@@ -67,9 +67,8 @@ button {
 }
 
 .hero-index {
-  width: 512px;
-  max-width: 100vw;
-  aspect-ratio: 16/9;
+  max-height: 288px;
+  max-width: 512px;
 }
 
 .review-container {
