@@ -1,38 +1,47 @@
 ---
-import Base from "../layouts/Base.astro"; 
+import Base from "../layouts/Base.astro";
 import "../styles/styles.css";
+import { Image } from "astro:assets";
+import img from "../../public/images/aktualnosci.webp";
 ---
 
-<Base 
-    title="Aktualności - FHU Hyziak - Skup grzybów i jabłek w Ropicy Polskiej"
-    path="aktualnosci"
-    description="Prowadzimy skup grzybów i jabłek w Ropicy Polskiej k. Gorlic Poznaj naszą ofertę na sezon 2023!"
+<Base
+  title="Aktualności - FHU Hyziak - Skup grzybów i jabłek w Ropicy Polskiej"
+  path="aktualnosci"
+  description="Prowadzimy skup grzybów i jabłek w Ropicy Polskiej k. Gorlic Poznaj naszą ofertę na sezon 2023!"
 >
-    <h1 class="heading">Poznaj ofertę skupu grzybów i jabłek!</h1>
-    <section class="intro-container">
-        <section class="intro">
-            <p class="p" tabindex="0">
-                Zakończyliśmy skup jabłek w sezonie 2023.
-            </p>
-            <p class="newline">
-                Nadal skupujemy grzyby świeże t.j.: borowik szlachetny, kolczak 
-                obłączasty, lejkowiec dęty, pieprznik trąbkowy, siedzuń sosnowy.
-            </p>
-            <p class="newline">
-                Prowadzimy również skup borowika suszonego pozaklasowego.
-            </p>
-            <p class="p">Serdecznie zapraszamy!  </p>
-            <p class="p" tabindex="0">
-                W celu uzyskania informacji o cenie oraz wymaganiach
-                dotyczących jakości towaru zapraszamy do kontaktu
-                telefonicznego.
-            </p>
-            <p class="newline" tabindex="0">
-                Aktualnie nie dysponujemy żadną powierzchnią biurową ani
-                magazynową do wynajęcia.
-            </p>
-            <p class="newline">Jeśli jesteś zainteresowany - dzwoń, pisz!</p>
-        </section>
-        <img src="images/aktualnosci.webp" alt="Stos czerwonych jabłek" class="hero" loading="lazy">
+  <h1 class="heading">Poznaj ofertę skupu grzybów i jabłek!</h1>
+  <section class="intro-container">
+    <section class="intro">
+      <pre
+        class="p">
+        <b>Od 5. sierpnia</b> rozpoczynamy skup jabłek przemysłowych oraz 
+        grzybów w sezonie 2024.
+      </pre>
+      <p class="newline">
+        Nadal skupujemy grzyby świeże t.j.: borowik szlachetny, kolczak
+        obłączasty, lejkowiec dęty, pieprznik trąbkowy, siedzuń sosnowy.
+      </p>
+      <p class="newline">
+        Prowadzimy również skup borowika suszonego pozaklasowego.
+      </p>
+      <p class="p">Serdecznie zapraszamy!</p>
+      <p class="p">
+        W celu uzyskania informacji o cenie oraz wymaganiach dotyczących jakości
+        towaru zapraszamy do kontaktu telefonicznego.
+      </p>
+      <p class="newline">
+        Posiadamy do wynajęcia <b
+          >poddasze użytkowe o powierzchni 180 m<sup>2</sup>.</b
+        >
+      </p>
+      <p class="newline">Jeśli jesteś zainteresowany - dzwoń, pisz!</p>
     </section>
+    <Image
+      src={img}
+      alt="Stos czerwonych jabłek"
+      class="hero"
+      loading="eager"
+    />
+  </section>
 </Base>

@@ -42,6 +42,10 @@ ol {
   list-style-type: none;
 }
 
+pre {
+  font-family: inherit;
+}
+
 /* classes */
 
 .header {

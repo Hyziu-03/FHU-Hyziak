@@ -1,22 +1,23 @@
 ---
 const { url, alt, name, contents } = Astro.props;
+import { Image } from "astro:assets";
 ---
 
-<section class="review-container" tabindex="0">
-    <section class="review">
-        <section class="meta">
-            <img src={url} class="pic" alt={alt} loading="lazy"/>
-            <section class="column">
-                <span class="reviewer">{name}</span>
-                <section class="rating">
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                </section>
-            </section>
-        </section> 
-        <p class="contents">{contents}</p>
+<section class="review-container">
+  <section class="review">
+    <section class="meta">
+      <Image src={url} class="pic" alt={alt} loading="lazy" inferSize={true}/>
+      <section class="column">
+        <span class="reviewer">{name}</span>
+        <section class="rating">
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+          <span class="material-symbols-outlined">star</span>
+        </section>
+      </section>
     </section>
+    <p class="contents">{contents}</p>
+  </section>
 </section>

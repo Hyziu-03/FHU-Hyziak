@@ -8,6 +8,7 @@ header.innerHTML = inOpennHours
 
 const contactInfo = document.querySelector("#contact-info");
 const map = document.querySelector("#map");
+
 if(map !== null) {
   map.style.width = `${contactInfo.offsetWidth}px`;
   map.style.height = `${contactInfo.offsetHeight}px`;
