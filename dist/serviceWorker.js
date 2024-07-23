@@ -1,1 +1,1 @@
-this.addEventListener("fetch",(function(){}),{passive:!0});
+this.addEventListener("fetch", function () {}, { passive: true });
