@@ -1,0 +1,34 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/styles.css";
+import "../styles/media.css";
+import { Image } from "astro:assets";
+import img from "../../public/images/podworko.webp";
+---
+
+<Base
+  title="FHU Hyziak - Skup grzybów i jabłek w Ropicy Polskiej"
+  path=""
+  description="Prowadzimy skup grzybów i jabłek w Ropicy Polskiej k. Gorlic. Oferujemy wynajem powierzchni magazynowych i biurowych w przystępnych cenach. Sprawdź naszą ofertę!"
+>
+  <h1 class="heading">Witamy na stronie www FHU Hyziak!</h1>
+  <section class="intro-container">
+    <section class="intro">
+      <p class="newline">Prowadzimy skup grzybów i jabłek.</p>
+      <p class="newline">Dysponujemy też magazynami pod wynajem.</p>
+      <p class="newline">Zapraszamy do zapoznania się z naszą ofertą.</p>
+      <p class="newline">Zachęcamy do skorzystania z menu powyżej.</p>
+      <button tabindex="-1">
+        <a href="/kontakt" class="link btn" rel="noopener noreferrer">
+          Skontaktuj się z nami
+        </a>
+      </button>
+    </section>
+    <Image
+      src={img}
+      alt="Siedziba FHU Hyziak w Ropicy Polskiej"
+      class="hero-index"
+      loading="eager"
+    />
+  </section>
+</Base>

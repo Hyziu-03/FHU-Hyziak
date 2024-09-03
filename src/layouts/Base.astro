@@ -1,0 +1,138 @@
+---
+import "../styles/font.css";
+import "../styles/base.css";
+import "../styles/media.css";
+import Logo from "../components/Logo.astro";
+import Preload from "../components/Preload.astro";
+import Html5Shiv from "../components/Html5Shiv.astro";
+const { title, path, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <script defer src="GoogleTag.js"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-JQDZ6GHD7E");
+        </script>
+        <script 
+            async 
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6294502141653714"
+            crossorigin="anonymous">
+        </script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content={description} />
+        <meta
+            name="keywords"
+            content="skup grzybów gorlice, sprzedaż grzybów, skup jabłek gorlice, wynajem magazynów gorlice, kolczak obłączasty skup, lejkowiec dęty skup, prawdziwek skup, borowik szlachetny skup, pieprznik jadalny skup, kurka skup,  mleczaj rydz skup, jabłka spady skup,  pieprznik trąbkowy skup, siedzuń sosnowy skup"
+        />
+        <meta name="title" content={title} />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Szymon Hyziak" />
+        <meta name="theme-color" content="#e0ba81" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta 
+            name="google-site-verification" 
+            content="iJHwbOmIvMbXsAveDPzore6nqDge2llLfh569YAyVGw" 
+        />
+
+        <link rel="apple-touch-icon" href="icons/mushroom.webp" />
+        <link rel="icon" href="icons/mushroom.webp" type="image/png" />
+        <link rel="manifest" href="manifest.json" />
+        <Preload />
+        <link rel="canonical" href=`https://fhu-hyziak.vercel.app/${path}` />
+
+        <title>{title}</title>
+
+       <Html5Shiv />
+    </head>
+    <body>
+        <div>
+            <header class="header" id="header">
+                Zapraszamy w godzinach 10:00 - 17:00!
+            </header>
+            <nav>
+                <ol class="menu">
+                    <li>
+                        <a 
+                            href="/" 
+                            class="link menu-item logo-container"
+                            rel="noopener noreferrer"
+                        >
+                            <Logo />Strona główna
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/kontakt"
+                            class="link menu-item transform-underline"
+                            rel="noopener noreferrer"
+                        >
+                            Kontakt
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/aktualnosci"
+                            class="link menu-item transform-underline"
+                            rel="noopener noreferrer"
+                        >
+                            Aktualności
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/opinie"
+                            class="link menu-item transform-underline"
+                            rel="noopener noreferrer"
+                        >
+                            Opinie
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/o-nas"
+                            class="link menu-item transform-underline"
+                            rel="noopener noreferrer"
+                        >
+                            O nas
+                        </a>
+                    </li>
+                </ol>
+            </nav>
+            <main class="content">
+                <slot />
+            </main>
+            <footer class="footer">
+                FHU Hyziak - skup grzybów, jabłek i wynajem magazynów w Ropicy
+                Polskiej k. Gorlic &copy; Wszelkie prawa zastrzeżone. <br />
+                Autorem strony internetowej jest Szymon Hyziak. 
+                Wersja z 23 lipca 2024 roku
+            </footer>
+        </div>
+    </body>
+    <script>
+        import "../scripts/index.js";
+        const styles = "color: #e0ba81; font-weight: bold";
+        async function registerServiceWorker() {
+            if (!("serviceWorker" in navigator)) return;
+            const event = await navigator.serviceWorker.register(
+                "serviceWorker.js",
+                { scope: "." }
+            );
+            event.installing
+                ? console.log("%cⓘ Service worker is being installed", styles)
+                : event.waiting
+                ? console.log("%cⓘ Service worker has been installed", styles)
+                : event.active &&
+                  console.log("%cⓘ Service worker is active", styles);
+        }
+        registerServiceWorker();
+    </script>
+</html>

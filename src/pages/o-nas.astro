@@ -1,0 +1,41 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/styles.css";
+import { Image } from "astro:assets";
+import img from "../../public/images/o-nas.webp";
+---
+
+<Base
+  title="O nas - FHU Hyziak - Skup grzybów i jabłek w Ropicy Polskiej"
+  path="o-nas"
+  description="Prowadzimy skup grzybów i jabłek w Ropicy Polskiej k. Gorlic. Sprawdź kim jesteśmy i co możemy Tobie zaoferować!"
+>
+  <h1 class="heading">Kim jesteśmy?</h1>
+  <section class="intro-container">
+    <section class="intro">
+      <p class="newline">
+        FHU Hyziak to firma rodzinna istniejąca na rynku już od 30 lat.
+      </p>
+      <p class="p">Prowadzimy skup jabłek i grzybów.</p>
+      <p class="newline">
+        Zajmujemy się również wynajmem powierzchni magazynowych
+      </p>
+      <p class="newline">
+        wraz z parkingiem, w atrakcyjnej lokalizacji na przedmieściach Gorlic,
+        bezpośrednio przy DK28.
+      </p>
+      <p class="p">
+        Miła i zawsze pomocna obsługa jest do Państwa dyspozycji w dni
+        powszednie od 10:00 do 16:00. W innych terminach prosimy o kontakt
+        telefoniczny.
+      </p>
+      <p class="p">Zapraszamy do współpracy!</p>
+    </section>
+    <Image
+      src={img}
+      alt="Grzyby i mech rosnące na drzewie"
+      class="hero"
+      loading="eager"
+    />
+  </section>
+</Base>

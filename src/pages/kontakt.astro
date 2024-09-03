@@ -1,0 +1,38 @@
+---
+import Base from "../layouts/Base.astro";
+import "../styles/icons.css";
+import "../styles/styles.css";
+import "../styles/contact.css";
+import ContactPiece from "../components/ContactPiece.astro";
+import Map from "../components/Map.jsx";
+---
+
+<Base
+    title="Kontakt - FHU Hyziak - Skup grzybów i jabłek w Ropicy Polskiej"
+    path="kontakt"
+    description="Prowadzimy skup grzybów i jabłek w Ropicy Polskiej k. Gorlic. Skontaktuj się z nami i dowiedz się o dzisiejszych cenach!"
+>
+    <ol class="contact-info" id="contact-info">
+        <ContactPiece
+            symbol="call"
+            link="+48 602 389 971"
+        />
+        <ContactPiece
+            symbol="call"
+            link="+48 692 019 518"
+        />
+        <ContactPiece
+            symbol="call"
+            link="+48 18 352 67 29"
+        />
+        <ContactPiece
+            symbol="mail"
+            link="jj.hyziak@xl.wp.pl"
+        />
+        <ContactPiece
+            symbol="home"
+            link="Ropica Polska 20, 38-300 Gorlice"
+        />
+    </ol>
+    <Map client:load />
+</Base>
