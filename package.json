@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "fhu-hyziak",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -11,10 +11,16 @@
   },
   "dependencies": {
     "@astrojs/react": "^3.6.0",
+    "@babel/traverse": "^7.23.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.12.2",
+    "dset": "^3.1.4",
+    "micromatch": "^4.0.8",
+    "path-to-regexp": "^8.1.0",
+    "postcss": "^8.4.31",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "undici": "^5.26.3"
   }
 }
