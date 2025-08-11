@@ -21,8 +21,6 @@
   border-radius: 32px;
 }
 
-/* media */
-
 @media screen and (max-width: 800px) {
   .content {
     flex-direction: column;

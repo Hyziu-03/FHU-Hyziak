@@ -1,11 +1,7 @@
-/* elements */
-
 button {
   background-color: transparent;
   border: none;
 }
-
-/* classes */
 
 .intro-container {
   display: flex;

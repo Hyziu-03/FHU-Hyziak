@@ -1,12 +1,8 @@
-/* variables */
-
 :root {
   --black: #2a2a2a;
   --white: #efefef;
   --primary: #e0ba81;
 }
-
-/* scrollbar */
 
 ::-webkit-scrollbar {
   width: 20px;
@@ -21,8 +17,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--primary, tan);
 }
-
-/* elements */
 
 * {
   margin: 0;
@@ -45,8 +39,6 @@ ol {
 pre {
   font-family: inherit;
 }
-
-/* classes */
 
 .header {
   background-color: var(--primary, tan);
