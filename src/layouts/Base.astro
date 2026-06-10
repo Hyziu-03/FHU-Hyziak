@@ -54,7 +54,7 @@ const { title, path, description } = Astro.props;
     <body>
         <div>
             <header class="header" id="header">
-                Zapraszamy w godzinach 10:00 - 17:00!
+                <a href="#main">Zapraszamy w godzinach 10:00 - 17:00!</a> 
             </header>
             <nav>
                 <ol class="menu">
@@ -105,7 +105,7 @@ const { title, path, description } = Astro.props;
                     </li>
                 </ol>
             </nav>
-            <main class="content">
+            <main class="content" id="main">
                 <slot />
             </main>
             <footer class="footer">
