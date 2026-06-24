@@ -5,7 +5,6 @@ import "../styles/media.css";
 import Logo from "../components/Logo.astro";
 import Preload from "../components/Preload.astro";
 import Html5Shiv from "../components/Html5Shiv.astro";
-import SpeedInsights from "@vercel/speed-insights/astro";
 const { title, path, description } = Astro.props;
 ---
 
@@ -135,5 +134,4 @@ const { title, path, description } = Astro.props;
         }
         registerServiceWorker();
     </script>
-    <SpeedInsights />
 </html>
