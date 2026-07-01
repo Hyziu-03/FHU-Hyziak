@@ -1,0 +1,46 @@
+diff --git a/dist/compose/compose-doc.js b/dist/compose/compose-doc.js
+index 63c94951884e2e8bfc397de82c74be0f81576b10..3538d55a5befb815e575e5d14c54c0531cf88afe 100755
+--- a/dist/compose/compose-doc.js
++++ b/dist/compose/compose-doc.js
+@@ -11,6 +11,7 @@ function composeDoc(options, directives, { offset, start, value, end }, onError)
+     const ctx = {
+         atKey: false,
+         atRoot: true,
++        depth: 0,
+         directives: doc.directives,
+         options: doc.options,
+         schema: doc.schema
+diff --git a/dist/compose/compose-node.js b/dist/compose/compose-node.js
+index cf7047e9b2b2956753a7c282b0926843d5d26d92..715d9ad0f9fe25d000932b420ce28f12c1aac16c 100755
+--- a/dist/compose/compose-node.js
++++ b/dist/compose/compose-node.js
+@@ -7,6 +7,7 @@ var composeScalar = require('./compose-scalar.js');
+ var resolveEnd = require('./resolve-end.js');
+ var utilEmptyScalarPosition = require('./util-empty-scalar-position.js');
+ 
++const MAX_COLLECTION_DEPTH = 1000;
+ const CN = { composeNode, composeEmptyNode };
+ function composeNode(ctx, token, props, onError) {
+     const atKey = ctx.atKey;
+@@ -30,6 +31,11 @@ function composeNode(ctx, token, props, onError) {
+         case 'block-map':
+         case 'block-seq':
+         case 'flow-collection':
++            if ((ctx.depth ?? 0) >= MAX_COLLECTION_DEPTH) {
++                onError(token, 'RESOURCE_EXHAUSTION', 'YAML collection nesting is too deep');
++                break;
++            }
++            ctx.depth = (ctx.depth ?? 0) + 1;
+             try {
+                 node = composeCollection.composeCollection(CN, ctx, token, props, onError);
+                 if (anchor)
+@@ -40,6 +46,9 @@ function composeNode(ctx, token, props, onError) {
+                 const message = error instanceof Error ? error.message : String(error);
+                 onError(token, 'RESOURCE_EXHAUSTION', message);
+             }
++            finally {
++                ctx.depth -= 1;
++            }
+             break;
+         default: {
+             const message = token.type === 'error'
