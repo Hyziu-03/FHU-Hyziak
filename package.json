@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "pnpm": {
     "overrides": {
-      "vite@7.3.1": "7.3.6"
+      "vite@7.3.1": "7.3.6",
+      "launch-editor": "2.14.1",
+      "launch-editor-middleware": "2.14.1"
     }
   },
   "scripts": {
