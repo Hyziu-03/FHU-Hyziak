@@ -1,6 +1,6 @@
 export function renderHeader() {
   const currHour = new Date().getHours();
-  const inOpenHours = currHour > 9 && currHour < 18;
+  const inOpenHours = currHour >= 10 && currHour < 16;
 
   const header = document.querySelector("#header");
   if(header === null) return;
