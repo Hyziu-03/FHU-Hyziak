@@ -3,9 +3,7 @@ module.exports = {
   transform: {
     "^.+\\.(js|jsx|mjs)$": "babel-jest",
   },
-  transformIgnorePatterns: [
-    "node_modules/(?!(your-esm-dependency)/)", // Ignore node_modules except specific ESM deps
-  ],
+  transformIgnorePatterns: ["/node_modules/"],
   moduleFileExtensions: ["js", "mjs", "json", "node"],
   testEnvironment: "jsdom",
 };
