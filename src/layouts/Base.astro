@@ -115,23 +115,23 @@ const { title, path, description } = Astro.props;
                 Wersja z 25 sierpnia 2026 roku
             </footer>
         </div>
+        <script>
+            import "../scripts/index.js";
+            const styles = "color: #e0ba81; font-weight: bold";
+            async function registerServiceWorker() {
+                if (!("serviceWorker" in navigator)) return;
+                const event = await navigator.serviceWorker.register(
+                    "serviceWorker.js",
+                    { scope: "." }
+                );
+                event.installing
+                    ? console.log("%cⓘ Service worker is being installed", styles)
+                    : event.waiting
+                    ? console.log("%cⓘ Service worker has been installed", styles)
+                    : event.active &&
+                      console.log("%cⓘ Service worker is active", styles);
+            }
+            registerServiceWorker();
+        </script>
     </body>
-    <script>
-        import "../scripts/index.js";
-        const styles = "color: #e0ba81; font-weight: bold";
-        async function registerServiceWorker() {
-            if (!("serviceWorker" in navigator)) return;
-            const event = await navigator.serviceWorker.register(
-                "serviceWorker.js",
-                { scope: "." }
-            );
-            event.installing
-                ? console.log("%cⓘ Service worker is being installed", styles)
-                : event.waiting
-                ? console.log("%cⓘ Service worker has been installed", styles)
-                : event.active &&
-                  console.log("%cⓘ Service worker is active", styles);
-        }
-        registerServiceWorker();
-    </script>
 </html>
